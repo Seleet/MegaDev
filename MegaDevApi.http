@@ -1,0 +1,6 @@
+@MegaDevApi_HostAddress = http://localhost:5073
+
+GET {{MegaDevApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
