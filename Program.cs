@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Controllers (om du har controllers)
+// Controllers (om du har controllers). och det har jag ju
 builder.Services.AddControllers();
 
 // Swagger
