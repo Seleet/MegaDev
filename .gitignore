@@ -1,7 +1,21 @@
+# Build output
 bin/
 obj/
+
+# IDE / editor
 .vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local/runtime data
 publish/
 *.db
 *.db-shm
 *.db-wal
+
