@@ -1,6 +1,8 @@
 using MegaDevApi.Data;
 using MegaDevApi.Dtos;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.EntityFrameworkCore;
+using System.IO;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,20 +13,34 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// CORS: frontend på megadev.se får anropa API:t på api.megadev.se
+// CORS: frontend får anropa API:t
+var corsOrigins = builder.Configuration.GetSection("Cors:Origins").Get<string[]>()
+    ?? ["https://megadev.se"];
 builder.Services.AddCors(opt =>
 {
     opt.AddDefaultPolicy(p =>
-        p.WithOrigins("https://megadev.se")
+        p.WithOrigins(corsOrigins)
          .AllowAnyHeader()
          .AllowAnyMethod());
 });
 
 // SQLite (persistens)
+var dataDir = Path.Combine(builder.Environment.ContentRootPath, "data");
+Directory.CreateDirectory(dataDir);
+var dbPath = Path.Combine(dataDir, "notes.db");
+var connString = builder.Configuration.GetConnectionString("Default")
+    ?? $"Data Source={dbPath}";
 builder.Services.AddDbContext<AppDbContext>(opt =>
-    opt.UseSqlite("Data Source=data/notes.db"));
+    opt.UseSqlite(connString));
 
 var app = builder.Build();
+
+// Reverse proxy (nginx)
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+});
+app.UseHttpsRedirection();
 
 // Swagger UI
 app.UseSwagger();
@@ -78,6 +94,7 @@ app.MapGet("/api/health", () =>
 app.MapGet("/api/notes", async (AppDbContext db) =>
 {
     var notes = await db.Notes
+        .AsNoTracking()
         .OrderByDescending(n => n.Id)
         .Select(n => new { n.Id, n.Text, n.CreatedUtc })
         .ToListAsync();
@@ -95,7 +112,7 @@ app.MapPost("/api/notes", async (AppDbContext db, NoteCreateDto dto) =>
     db.Notes.Add(note);
     await db.SaveChangesAsync();
 
-    return Results.Created($"/api/notes/{note.Id}", new { note.Id });
+    return Results.Created($"/api/notes/{note.Id}", new { note.Id, note.Text, note.CreatedUtc });
 });
 
 app.MapDelete("/api/notes/{id:int}", async (AppDbContext db, int id) =>
