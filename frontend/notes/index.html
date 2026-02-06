@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>megadev.se</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <h1>megadev.se</h1>
+      <p>Frontend (HTML/CSS/JS) → API (.NET 10) → SQLite</p>
+      <div class="links">
+        <a class="btn" href="https://api.megadev.se/swagger" target="_blank">Swagger</a>
+        <a class="btn ghost" href="https://api.megadev.se/api/health" target="_blank">Health</a>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Notes</h2>
+      <form id="noteForm" class="row">
+        <input id="noteText" type="text" placeholder="Skriv en note..." maxlength="120" required />
+        <button class="btn" type="submit">Lägg till</button>
+      </form>
+
+      <div id="status" class="status"></div>
+      <ul id="notes" class="list"></ul>
+    </section>
+
+    <footer class="footer">
+      <span>API: <code>api.megadev.se</code></span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
