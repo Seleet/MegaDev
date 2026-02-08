@@ -1,48 +1,69 @@
 <!doctype html>
 <html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Martin Selin – Portfolio</title>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <main class="container">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Martin Selin – Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">Portfolio</p>
       <h1>Martin Selin</h1>
       <p class="subtitle">Studerande .NET-utvecklare med molninriktning</p>
 
-      <p>C# · .NET · Azure · Web API</p>
-      <p class="meta">Höganäs · JENSEN yrkeshögskola</p>
+      <div class="tags">
+        <span>C#</span>
+        <span>.NET</span>
+        <span>Azure</span>
+        <span>Web API</span>
+      </div>
 
+      <p class="meta">Höganäs · JENSEN yrkeshögskola</p>
+    </header>
+
+    <section class="card">
       <p>
         Jag studerar till .NET-utvecklare med molninriktning och bygger egna
         projekt parallellt med studierna. Här samlar jag det jag skapar – från
-        backend-API:er till enkla och tydliga frontend-lösningar. Fokus på denna
-        sidan har än så länge varit att få upp servern säkert och kopplat så att
-        jag kan bygga och testa mina projekt. Det är en lärorik process där jag
-        får praktisk erfarenhet av både backend och frontend, samt hur man kan
-        integrera dem på ett smidigt sätt. Jag ser fram emot att fortsätta
-        utveckla mina färdigheter och dela med mig av mina projekt här!
+        backend-API:er till enkla och tydliga frontend-lösningar. Fokus på
+        denna sidan har än så länge varit att få upp servern säkert och kopplat
+        så att jag kan bygga och testa mina projekt. Det är en lärorik process
+        där jag får praktisk erfarenhet av både backend och frontend, samt hur
+        man kan integrera dem på ett smidigt sätt. Jag ser fram emot att
+        fortsätta utveckla mina färdigheter och dela med mig av mina projekt
+        här!
       </p>
 
       <div class="links">
-        <a href="https://github.com/Seleet" target="_blank">GitHub</a>
-        <a
-          href="https://www.linkedin.com/in/martin-selin-3b7b2937b/"
-          target="_blank"
-          >LinkedIn</a
-        >
+        <a class="btn" href="https://github.com/Seleet" target="_blank">GitHub</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/martin-selin-3b7b2937b/" target="_blank">LinkedIn</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h2>Projekt</h2>
+        <p class="section-subtitle">Bygger och publicerar löpande.</p>
       </div>
 
-      <hr />
+      <div class="project-list">
+        <a class="project" href="/notes/">
+          <div>
+            <h3>Notes-demo</h3>
+            <p>Minimal .NET + SQLite + enkel frontend.</p>
+          </div>
+          <span class="pill">Live</span>
+        </a>
+      </div>
+    </section>
+  </main>
 
-      <h2>Projekt</h2>
-      <a href="/notes/">Notes-demo</a>
+  <script src="main.js"></script>
+</body>
 
-      <p>Projekt och labbar publiceras här löpande.</p>
-    </main>
-
-    <script src="main.js"></script>
-  </body>
 </html>
