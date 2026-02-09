@@ -62,7 +62,8 @@ h2 {
 }
 
 .profile-pic {
-  width: clamp(850px, 28vw, 220px);
+  width: 850px;
+  max-width: 100%;
   height: auto;
   border-radius: 16px;
   display: block;
@@ -245,6 +246,10 @@ p {
 @media (max-width: 720px) {
   .container {
     padding-top: 3.5rem;
+  }
+
+  .profile-pic {
+    width: 425px;
   }
 
   .card {
