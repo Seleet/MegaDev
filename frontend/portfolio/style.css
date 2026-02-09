@@ -61,6 +61,15 @@ h2 {
   margin: 0 0 1.5rem;
 }
 
+.profile-pic {
+  width: clamp(850px, 28vw, 220px);
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  margin: 0.2rem 0 1.4rem;
+  border: 1px solid rgba(62, 203, 255, 0.35);
+}
+
 .meta {
   color: var(--muted);
   font-size: 0.95rem;
