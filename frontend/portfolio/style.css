@@ -44,13 +44,6 @@ h1 {
   letter-spacing: -0.02em;
 }
 
-.logo {
-  display: block;
-  width: min(120%, 820px);
-  height: auto;
-  margin: 0 0 0.6rem;
-}
-
 hr {
   border: none;
   border-top: 1px solid var(--border);
