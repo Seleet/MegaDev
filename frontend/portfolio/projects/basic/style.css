@@ -1,0 +1,73 @@
+:root {
+  color-scheme: dark;
+  --bg: #0d2b45;
+  --panel: #102a43;
+  --text: #e2e8f0;
+  --muted: #98a6c4;
+  --azure: #3ecbff;
+  --border: rgba(62, 203, 255, 0.35);
+  --shadow: 0 16px 36px rgba(5, 8, 20, 0.35);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.page {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 4.5rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.75rem;
+  color: var(--azure);
+  margin: 0 0 0.6rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  max-width: 65ch;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+}
+
+.lesson-list {
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.lesson-list a {
+  color: var(--azure);
+  text-decoration: none;
+}
+
+.lesson-list a:hover {
+  text-decoration: underline;
+}
+
+.lesson-list span {
+  color: var(--muted);
+}
