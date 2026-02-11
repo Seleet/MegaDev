@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <br>
+
+<h1>NEW USER REGISTER HERE</h1>
+<h2>Please fill out the following information</h2>
+    <form action="https://formshow.systementor.se" method="POST" class="form">
+      <input type="email" id="email" placeholder="Enter Email" />
+
+      <div class="row">
+        <input type="text" id="fname" placeholder="First Name" />
+        <input type="text" id="lname" placeholder="Last Name" />
+      </div>
+
+      <input type="password" id="epassw" placeholder="Enter Password" />
+      <input type="password" id="cpassw" placeholder="Confirm Password" />
+
+            <select id="country">
+                <option value="" disabled selected>Select Country</option>
+            <option value="Sweden">Sweden</option>  
+            <option value="Norway">Norway</option>  
+            <option value="Denmark">Denmark</option>  
+            </select> <br>
+                  <select id="usertype">
+                      <option value="" disabled selected>Select Usertype</option>
+            <option value="Normal">Normal</option>  
+            <option value="Premium">Premium</option>  
+            <option value="VIP">VIP</option>  
+            </select> <br>
+
+
+
+      <input type="submit" value="Submit" />
+  
+     
+    </form>
+
+   <br>
+<br>
+<br>
+<br>
+<br>
+
+<h2>Please fill out the following information.</h2>
+
+      <form action="https://formshow.systementor.se" method="POST" class="form">
+         <input type="email" id="email" placeholder="Enter Email" /><br>
+ <textarea name="comment" rows="10" cols="50"></textarea>
+  <input type="submit" value="Submit" />
+
+      </form>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<H2>CV uppgifter</H2>
+
+    <form action="https://formshow.systementor.se" method="POST" class="form">
+
+
+
+  
+  <div class="row">
+    <div class="field">
+      <label for="namn">Namn</label>
+      <input type="text" id="namn">
+    </div>
+
+    <div class="field">
+      <label for="telefon">Mobiltelefon</label>
+      <input type="tel" id="telefon">
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="field">
+      <label for="adress">Adress</label>
+      <input type="text" id="adress">
+    </div>
+
+    <div class="field">
+      <label for="postnummer">Postnummer</label>
+      <input type="text" id="postnummer">
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="field">
+      <label for="postort">Postort</label>
+      <input type="text" id="postort">
+    </div>
+
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="email" id="email">
+    </div>
+  </div>
+<div class="row">
+  
+  <div class="field">
+    <label for="beskrivning">Beskrivning av Utbildningen*</label>
+    <textarea name="comment" rows="10"></textarea>
+
+   
+<label class="option">
+  <input type="checkbox" id="korkort">
+  Jag har körkort
+</label>
+
+<label class="option">
+  <input type="checkbox" id="bil">
+  Jag har tillgång till bil
+</label>
+
+  </div>
+
+  
+<div class="field">
+
+  <label class="option">
+    <input type="radio" name="workarea" value="Sverige">
+    Kan jobba inom Sverige
+  </label>
+
+  <label class="option">
+    <input type="radio" name="workarea" value="EU">
+    Kan jobba inom EU
+  </label>
+
+  <label class="option">
+    <input type="radio" name="workarea" value="Regionalt">
+    Endast arbete regionalt
+  </label>
+
+</div>
+
+
+</div> 
+
+<div class="actions">
+  <input type="reset" value="Återställ">
+  <input type="submit" value="Skicka">
+</div>
+
+</form>
+
+ <style>
+     .form {
+  width: 400px;
+}
+
+.form input:not([type="radio"]):not([type="checkbox"]),
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.option input {
+  width: auto;
+  margin: 0;
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.actions input {
+  width: auto;
+  padding: 10px 20px;
+}
+
+
+    </style>
+  </body>
+</html>
