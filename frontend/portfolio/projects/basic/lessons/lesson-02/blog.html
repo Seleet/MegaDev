@@ -4,6 +4,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Semantisk struktur - Blog</title>
+    <style>
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* viktig: gör att layouten fyller hela höjden */
+    min-height: 100vh;
+
+    /* Layout: nav till vänster, main till höger */
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header header"
+      "nav    main"
+      "footer footer";
+    gap: 12px;
+
+    /* så du ser att sidan inte “är vit” */
+    background: #f6f6f6;
+    padding: 12px;
+  }
+
+  header { grid-area: header; background: #cfe2cf; padding: 16px; }
+  nav    { grid-area: nav;    background: #e5d6d6; padding: 16px; }
+  main   { grid-area: main;   background: #f0e9d8; padding: 16px; }
+  footer { grid-area: footer; background: #e6d6e6; padding: 16px; }
+
+  /* Gör så att nav-länkarna blir "meny" */
+  nav a {
+    display: block;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: #111;
+  }
+
+  /* Artiklar som boxar */
+  article {
+    background: #d6d6f0;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+  }
+
+  /* Inne i artikeln: header + content tydligt */
+  article > header {
+    background: #b9d7b9;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+
+  article > div {
+    background: #e3cde3;
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  /* Mobil: nav ovanför main */
+  @media (max-width: 700px) {
+    body {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    }
+  }
+</style>
+
   </head>
   <body>
     <header>
