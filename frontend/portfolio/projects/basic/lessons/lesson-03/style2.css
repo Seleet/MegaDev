@@ -1,0 +1,62 @@
+.myBox {
+  width: 50px;
+  height: 50px;
+  padding: 10px 190px 50px 30px;
+  /* padding-top: 10px;
+        padding-left: 30px;
+        padding-right: 190px;
+        padding-bottom: 50px; */
+
+  /* background: rgb(189, 189, 189);
+        background-image: url(https://aspcodeprod.blob.core.windows.net/school-dev/greg-rosenke-6QnEf_b47eA-unsplash.jpg);
+        background-position-x: 100px;
+        background-repeat: no-repeat;
+        background-size: contain; */
+
+  background: rgb(189, 189, 189)
+    url("https://aspcodeprod.blob.core.windows.net/school-dev/greg-rosenke-6QnEf_b47eA-unsplash.jpg")
+    100px 0 / contain no-repeat;
+}
+body {
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+}
+h1
+{
+font-family: "Anton";
+}
+
+.card {
+  display: inline-block;
+  width: 50px;
+  height: 80px;
+  position: relative;
+  border: 1px solid blue;
+  text-align: center;
+  line-height: 80px;
+  border-radius: 5px;
+  color: blue;
+}
+  .redcard
+  {
+      color: red;
+      border-color: red;
+  }
+  .blackcard
+  {
+      color: black;
+      border-color: black;
+  }
+
+  #small{
+    font-size: 29px;
+}
+.myTitle{
+  font-family: "Anton";
+}
+
+li{
+  list-style: none;
+
+}
+
