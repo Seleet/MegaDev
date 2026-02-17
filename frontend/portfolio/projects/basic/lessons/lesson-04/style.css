@@ -1,0 +1,24 @@
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1em;
+  padding: 1em;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product p {
+  font-weight: 600;
+  margin: 0.5em 0 0.2em;
+}
