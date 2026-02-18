@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding-top: 48px;
+  font-family: system-ui, Arial, sans-serif;
+  background: #97afb6;
+  color: #fff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 8px max(40px, calc((100% - min(1600px, calc(100% - 80px))) / 2));
+  background: #e030c8;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.logo {
+  height: 40px;
+  padding-top: 9px;
+}
+
+.hero {
+  width: min(1600px, calc(100% - 80px));
+  margin: 0 auto clamp(16px, 4vw, 32px);
+  aspect-ratio: 1920/800;
+  max-height: min(800px, 70vh);
+  background: url("assets/bakgrundshero.png") center/cover no-repeat;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-text {
+  padding: clamp(16px, 4vw, 48px);
+}
+
+.hero-text h1 {
+  font-family: 'Honk', Arial, sans-serif;
+  margin: 0;
+  font-size: clamp(48px, 8vw, 180px);
+  line-height: 1;
+}
+
+.hero-text p {
+  margin: 8px 0 16px 0;
+  font-weight: 700;
+}
+
+main {
+  width: min(1600px, calc(100% - 80px));
+  margin: 0 auto;
+  padding: 24px;
+  display: grid;
+  gap: 24px;
+}
+
+main section {
+  background: rgba(224, 214, 130, 0.938);
+  border-radius: 12px;
+  padding: 24px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  text-align: center;
+  padding: 24px;
+}
+
+footer p {
+  margin: 0;
+}
