@@ -71,16 +71,17 @@ h2 {
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 8px;
+  border: 1px solid #161af7;
   font-weight: 600;
   display: inline-block;
 }
 
 .a {
-  background: #2e8b57;
+  background: #161af7;
   color: white;
 }
 
 .b {
-  background: #005aff;
-  color: white;
+  background: #ffffff;
+  color: rgb(35, 31, 255);
 }
