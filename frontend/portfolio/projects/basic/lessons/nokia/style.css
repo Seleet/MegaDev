@@ -1,4 +1,6 @@
-* { margin: 0; }
+* {
+  margin: 0;
+}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -62,23 +64,23 @@ h2 {
 .knappar {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin-top: 15px;
+  gap: 1rem;
 }
 
-button {
-  padding: 8px 16px;
-  cursor: pointer;
+.knappar a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-block;
 }
 
-button.a {
-  background: #0066cc;
-  color: #fff;
-  border: none;
+.a {
+  background: #2e8b57;
+  color: white;
 }
 
-button.b {
-  background: #fff;
-  color: #0066cc;
-  border: 2px solid #0066cc;
+.b {
+  background: #005aff;
+  color: white;
 }
