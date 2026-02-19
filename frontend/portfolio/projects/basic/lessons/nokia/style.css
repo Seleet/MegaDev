@@ -1,0 +1,84 @@
+* { margin: 0; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  background: #333;
+  padding: 10px 20px;
+  font-family: "Oswald", sans-serif;
+  margin: -20px -20px 20px -20px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+nav > img {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+}
+
+nav .nav-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nokia-bild-wrap {
+  margin: 20px auto 0;
+  width: 680px;
+  overflow: hidden;
+}
+
+.nokia-bild-wrap img {
+  width: 100%;
+  display: block;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.knappar {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+button {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+button.a {
+  background: #0066cc;
+  color: #fff;
+  border: none;
+}
+
+button.b {
+  background: #fff;
+  color: #0066cc;
+  border: 2px solid #0066cc;
+}
