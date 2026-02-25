@@ -1,18 +1,15 @@
-/* Golden ratio + Jurassic Park palette */
 :root {
   --phi: 1.618;
   --w: 1000px;
   --h: calc(var(--w) / var(--phi));
   --nav-h: 62px;
   --space-lg: 39px;
-  /* Jurassic Park franchise colors (logo: red, yellow, black, green) */
   --jp-black: #0a0a0a;
   --jp-red: #b91c1c;
   --jp-amber: #d4a84b;
   --jp-yellow: #eab308;
   --jp-cream: #e8e0c8;
   --jp-white: #f5f5f0;
-  /* Typsnitt som loggan */
   --font-heading: "Bebas Neue", sans-serif;
   --font-body: "Open Sans", system-ui, sans-serif;
 }
@@ -235,7 +232,6 @@ main {
   color: var(--jp-cream);
 }
 
-/* Djurbilder i rad */
 .animals {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -265,7 +261,6 @@ main {
   color: var(--jp-amber);
 }
 
-/* Formulär */
 form {
   display: grid;
   gap: 0.5rem;
@@ -319,7 +314,6 @@ form button:hover {
   background: #991b1b;
 }
 
-/* Tabell */
 #tabell {
   overflow-x: auto;
 }
@@ -372,7 +366,6 @@ table a:hover {
   text-decoration: underline;
 }
 
-/* Karta */
 .map {
   margin-top: 16px;
   border-radius: 10px;
@@ -388,7 +381,6 @@ table a:hover {
   display: block;
 }
 
-/* Responsiv */
 @media (max-width: 700px) {
   header {
     height: auto;
@@ -443,7 +435,6 @@ table a:hover {
   }
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 24px;
