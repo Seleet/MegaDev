@@ -110,13 +110,13 @@ header a:hover {
   color: var(--jp-white);
 }
 
-.hero-logo {
+.hero-box {
   max-width: 714px;
   width: 76%;
   margin-bottom: 0.5rem;
 }
 
-.hero-logo img {
+.hero-box img {
   width: 100%;
   height: auto;
   display: block;
@@ -426,10 +426,12 @@ table a:hover {
   .hero {
     margin: 12px 16px;
   }
+
   main {
     padding-left: 16px;
     padding-right: 16px;
   }
+
   .animals {
     grid-template-columns: 1fr;
   }
