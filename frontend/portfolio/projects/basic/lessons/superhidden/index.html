@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Martin Selin Web Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1 class="hero-title">Hi, I'm Martin</h1>
+          <div class="hero-portrait">
+            <img src="assets/portr.png" alt="Portrait picture of Martin Selin" />
+          </div>
+          <p>
+            <span class="hero-highlight">.NET</span> student focused on
+            <span class="hero-accent">ASP.NET</span> Core & <span class="hero-accent">Azure</span>
+          </p>
+          <p>
+            I build <span class="hero-emphasis">real</span> projects and run my own
+            <span class="hero-emphasis">server</span> environment.
+          </p>
+          <div class="hero-buttons">
+            <a href="#about" class="hero-buttons__btn">Learn more about me</a>
+            <a href="assets/cv.pdf" class="hero-buttons__btn" download="Martin_Selin_CV.pdf">Download CV</a>
+            <a href="#contact" class="hero-buttons__btn">Contact me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="about section" id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <p>
+            I am a .NET student with a strong interest in web development,
+            backend systems, and clean design.
+          </p>
+
+          <p>
+            My professional journey started in a completely different field. I
+            trained as a chef and worked in restaurants for about a year after
+            finishing chef school. The work meant long hours, low pay, and
+            working when everyone else was free. After a while I realized it
+            was not the life I wanted long term.
+          </p>
+
+          <p>
+            I moved into industrial work instead. The idea was to earn a
+            stable income while taking time to think about what I really
+            wanted to study and work with. I stayed in the industry for many
+            years, built a stable life, and started a family with my wife and
+            our child. However, shift work — especially nights and weekends —
+            eventually started affecting my sleep and made me rethink my
+            long-term career path.
+          </p>
+
+          <p>
+            My interest in computers goes much further back. My first computer
+            was a Commodore 64. Later, when I spent time playing games on the
+            Amiga, I discovered the programming environment AMOS. A friend and
+            I became excited about the idea of buying it and trying to build
+            our own Desert Strike-style game. We didn’t have the money for it
+            at the time, but the idea of creating things with computers stuck
+            with me.
+          </p>
+
+          <p>
+            We also spent a lot of time hanging around the local computer
+            store, looking at the machines running Windows 3.11 and dreaming
+            about owning one ourselves.
+          </p>
+
+          <p>
+            Years later, when my child became older and more independent, I
+            finally had the opportunity to change direction. With support from
+            Sweden's omställningsstöd, I decided to pursue something I had
+            always been curious about: technology and software development.
+          </p>
+
+          <p>
+            Today I focus on .NET development, web technologies, and backend
+            systems. I enjoy building real projects, understanding how systems
+            work under the hood, and continuously improving my skills as a
+            developer.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills section" id="skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <p class="skills-intro">
+          I am very driven and curious. I study .NET and web development full-time and keep building on the side. So far
+          I have done courses in C# and .NET, databases, and web development; next up are Azure cloud (IaaS, PaaS,
+          SaaS), DevOps and CI/CD, security, testing, and a degree project.
+        </p>
+        <p class="skills-intro">
+          I focus on web, backend with .NET, and databases. I am also into Docker and Kubernetes and am reading
+          <em>Modern Software Engineering</em> by David Farley.
+        </p>
+        <div class="skills-courses">
+          <div class="skills-courses__block">
+            <h3 class="skills-courses__title">Courses completed</h3>
+            <ul class="skills-courses__list">
+              <li>Self-leadership, basics</li>
+              <li>Programming with C# and .NET, basics</li>
+              <li>Database technology</li>
+              <li>Programming with C# and .NET, continuation</li>
+              <li>Self-leadership, continuation</li>
+              <li>Web application development</li>
+            </ul>
+          </div>
+          <div class="skills-courses__block">
+            <h3 class="skills-courses__title">Upcoming courses</h3>
+            <ul class="skills-courses__list">
+              <li>Azure cloud development</li>
+              <li>Security in cloud development</li>
+              <li>Agile project management</li>
+              <li>Work-based learning 1</li>
+              <li>Testing</li>
+              <li>Work-based learning 2</li>
+              <li>Degree project</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skills-content">
+          <div class="skill-group">
+            <div class="skill-group__logos">
+              <img src="assets/htmljscss.png" alt="HTML, CSS, JavaScript" class="skill-group__img" />
+            </div>
+            <h3 class="skill-group__title">Frontend</h3>
+            <div class="skill-card">
+              <span class="skill-card__name">HTML</span>
+              <p class="skill-card__desc">Semantic structure, accessibility, layout</p>
+              <p class="skill-card__context">Used in my portfolio and course assignments</p>
+            </div>
+            <div class="skill-card">
+              <span class="skill-card__name">CSS</span>
+              <p class="skill-card__desc">Responsive layout, Grid and Flexbox</p>
+              <p class="skill-card__context">Used in portfolio and school assignments</p>
+            </div>
+            <div class="skill-card">
+              <span class="skill-card__name">JavaScript</span>
+              <p class="skill-card__desc">Vanilla JS, DOM, basics</p>
+              <p class="skill-card__context">Used in course exercises and small projects</p>
+            </div>
+            <a href="#portfolio" class="skill-group__link">See HTML/CSS projects</a>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group__logos">
+              <img src="assets/csharp.png" alt="C#" class="skill-group__img" />
+              <img src="assets/asp.png" alt="ASP.NET" class="skill-group__img" />
+              <img src="assets/dotnetlogo.png" alt=".NET" class="skill-group__img" />
+            </div>
+            <h3 class="skill-group__title">Backend</h3>
+            <div class="skill-card">
+              <span class="skill-card__name">C#</span>
+              <p class="skill-card__desc">Structured code, methods, OOP basics</p>
+              <p class="skill-card__context">Used in console apps and backend practice projects</p>
+            </div>
+            <div class="skill-card">
+              <span class="skill-card__name">.NET</span>
+              <p class="skill-card__desc">ASP.NET Core, Web API</p>
+              <p class="skill-card__context">Used in school and personal projects</p>
+            </div>
+            <div class="skill-card">
+              <span class="skill-card__name">MVC</span>
+              <p class="skill-card__desc">ASP.NET Core MVC, views, controllers</p>
+              <p class="skill-card__context">Used in web applications and course projects</p>
+            </div>
+            <a href="#portfolio" class="skill-group__link">See C# projects</a>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group__logos">
+              <img src="assets/sqlserver.png" alt="SQL Server" class="skill-group__img" />
+              <img src="assets/ssms.png" alt="SSMS" class="skill-group__img" />
+              <img src="assets/docker.png" alt="Docker" class="skill-group__img" />
+            </div>
+            <h3 class="skill-group__title">Database</h3>
+            <div class="skill-card">
+              <span class="skill-card__name">SQL</span>
+              <p class="skill-card__desc">Queries, tables, relationships</p>
+              <p class="skill-card__context">Used with SQL Server in database exercises</p>
+            </div>
+            <div class="skill-card">
+              <span class="skill-card__name">SQL Server</span>
+              <p class="skill-card__desc">Database design, T-SQL</p>
+              <p class="skill-card__context">Used in school and lab environments</p>
+            </div>
+            <div class="skill-card">
+              <span class="skill-card__name">Database design</span>
+              <p class="skill-card__desc">Tables, keys, normalization</p>
+              <p class="skill-card__context">Used in course projects</p>
+            </div>
+            <a href="#portfolio" class="skill-group__link">See SQL exercises</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio section" id="portfolio">
+      <div class="container">
+        <h2>Portfolio</h2>
+
+        <article class="project project--reversed">
+          <div class="project-text">
+            <h3>Megadev Ubuntu Server and Megadev.se</h3>
+            <p>
+              After taking courses in databases and ASP.NET Web API, I wanted
+              to run what I had learned in a real environment instead of
+              keeping the API and database only on my machine. I looked at
+              Azure but decided it would be cheaper and more interesting to
+              buy a small PC on Tradera and run Ubuntu Server. I picked up an
+              HP EliteDesk for little money. To make it reachable from the
+              internet I bought a DNS address from Strato. My old router
+              turned out to be underpowered and flaky, so I replaced it and
+              spent time getting the settings right. I registered the domain
+              Megadev.se and set everything up as securely as I could:
+              nginx in front of ASP.NET on the home server, with my own
+              domain.
+            </p>
+            <p>
+              The project is still in an early phase. I have bigger plans to
+              use this server as the backend for future web and mobile app
+              projects.
+            </p>
+            <a href="https://www.megadev.se/">View Project</a>
+          </div>
+
+          <div class="project-image">
+            <img src="assets/serverproject.png" alt="Megadev.se home server and domain setup" />
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-text">
+            <h3>400m pace car</h3>
+            <p>
+              In track and field, pace-setting—from human hares to modern
+              wavelights (LED systems that move around a 200m/400m track)—helps
+              runners hold the perfect tempo and break records. Wavelights have
+              been debated as a factor in the recent surge of world records:
+              when the pace is set right, you avoid building lactate too early
+              and can run with confidence. The downside is that this technology
+              is cumbersome to install, often semi-permanent, and outdoors it
+              is weather-sensitive and at risk of theft or damage.
+            </p>
+            <p>
+              My alternative is a personal pace car: a small vehicle you place
+              on the track and set to your exact target pace. It is cheaper,
+              mobile, and easy to set up. I am building it from a converted RC
+              car, using sensors, cameras, and custom software to follow the
+              lane and maintain speed.
+            </p>
+            <a href="#">View Project</a>
+          </div>
+
+          <div class="project-image">
+            <img src="assets/trackpacer.png" alt="400m pace car RC vehicle on track" />
+          </div>
+        </article>
+
+        <article class="project project--reversed">
+          <div class="project-text">
+            <h3>JsAzureC# Zoo</h3>
+            <p>
+              My first website for the Web Development course: the assignment
+              was to build a zoo site. I went for a Jurassic Park angle with a
+              dinosaur theme, and squeezed in some web-dev and .NET references
+              in the logotype and name, plus a bit of over-the-top humour. The
+              project taught me to work with custom fonts, a navbar, hover
+              effects, grid layout, lists, tables, forms, and an embedded
+              Google Maps map.
+            </p>
+            <a href="https://www.megadev.se/projects/basic/lessons/zoo/">View Project</a>
+          </div>
+
+          <div class="project-image">
+            <img src="assets/jurassicpark.png" alt="JsAzureC# Zoo – zoo site with dinosaur theme" />
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="testimonials section" id="testimonials">
+      <div class="container">
+        <h2>Testimonials</h2>
+        <div class="testimonials-list">
+          <article class="testimonial">
+            <div class="testimonial__portrait">
+              <img src="assets/testimonialportrait1.png" alt="" width="80" height="80" />
+            </div>
+            <blockquote class="testimonial__quote">
+              Martin is a great guy! Highly recommended!
+            </blockquote>
+            <footer class="testimonial__author">
+              — Daniel K., leads 3 developer teams
+            </footer>
+          </article>
+          <article class="testimonial">
+            <div class="testimonial__portrait">
+              <img src="assets/testimonialportrait2.png" alt="" width="80" height="80" />
+            </div>
+            <blockquote class="testimonial__quote">
+              Martin solves problems and gets things done.
+            </blockquote>
+            <footer class="testimonial__author">
+              — Andreas D., Martin's manager at Höganäs
+            </footer>
+          </article>
+          <article class="testimonial">
+            <div class="testimonial__portrait">
+              <img src="assets/testimonialportrait.png" alt="" width="80" height="80" />
+            </div>
+            <blockquote class="testimonial__quote">
+              Martin handles his work and responsibilities and is a leadership resource to his team.
+            </blockquote>
+            <footer class="testimonial__author">
+              — Linus N., former manager
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="section-intro">
+          Send a message - I'll get back to you as soon as I can.
+        </p>
+        <form class="contact-form" action="https://formsubmit.co/2cda2b5878a2d2b95a1c1c20db6341eb" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <button type="submit" class="btn-submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-inner">
+      <p class="footer-copyright">© 2026 Martin Selin</p>
+      <a href="https://github.com/" target="_blank" rel="https://github.com/Seleet" class="footer-social__link"
+        aria-label="GitHub">
+        <img src="assets/github.png" alt="" />
+      </a>
+      <a href="https://www.linkedin.com/in/" target="_blank" rel="https://www.linkedin.com/in/martin-selin-3b7b2937b/"
+        class="footer-social__link footer-social__link--linkedin" aria-label="LinkedIn">
+        <img src="assets/linkedin.png" alt="" />
+      </a>
+      <div class="weather-widget" title="Weather in Höganäs">
+        <img class="weather-widget__icon" src="" alt="" hidden />
+        <span class="weather-widget__temp"></span>
+        <span class="weather-widget__city">Höganäs</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/weather.js"></script>
+</body>
+
+</html>
