@@ -1,36 +1,62 @@
-function myLight(myColor) {
-  let redbutton = document.getElementById("myProgress-" + myColor);
-  const lights = document.querySelectorAll(".light");
-  switch (myColor) {
-    case "red":
-      turnTraficLightOff(lights);
-      redbutton.style.backgroundColor = myColor;
-      break;
-    case "yellow":
-      if(document.getElementById("myProgress-red").style.backgroundColor === "red")
-      {
-        document.getElementById("myProgress-red").style.backgroundColor = "red";
-        redbutton.style.backgroundColor = myColor;
-      }else{
-       turnTraficLightOff(lights);
-        redbutton.style.backgroundColor = myColor;
-      }
-      break;
-    case "green":
-      turnTraficLightOff(lights);
-      redbutton.style.backgroundColor = myColor;
-      break;
-    case "grey":      
-      turnTraficLightOff(lights);
-    break;
-    default:
-      redbutton.style.backgroundColor = "grey";
+const LAMP = {
+  red: document.getElementById("myProgress-red"),
+  yellow: document.getElementById("myProgress-yellow"),
+  green: document.getElementById("myProgress-green"),
+};
+
+let currentState = "stop";
+
+function applyLight(lamp, color) {
+  lamp.style.backgroundColor = color;
+
+  if (color === "red" || color === "yellow" || color === "green") {
+    lamp.style.boxShadow = `0 0 20px ${color}, 0 0 40px ${color}`;
+  } else {
+    lamp.style.boxShadow = "none";
+  }
+}
+
+function setLights(state) {
+  const grey = "grey";
+
+  if (state === "wait") {
+    if (currentState === "go") {
+      state = "waitToStop";
+    } else {
+      state = "waitToGo";
+    }
   }
 
-  
-  function turnTraficLightOff(lights){
-     for (let i = 0; i < lights.length; i++) {
-        lights[i].style.backgroundColor = "grey";
-      }
+  switch (state) {
+    case "stop":
+      applyLight(LAMP.red, "red");
+      applyLight(LAMP.yellow, grey);
+      applyLight(LAMP.green, grey);
+      break;
+
+    case "waitToGo":
+      applyLight(LAMP.red, "red");
+      applyLight(LAMP.yellow, "yellow");
+      applyLight(LAMP.green, grey);
+      break;
+
+    case "waitToStop":
+      applyLight(LAMP.red, grey);
+      applyLight(LAMP.yellow, "yellow");
+      applyLight(LAMP.green, grey);
+      break;
+
+    case "go":
+      applyLight(LAMP.red, grey);
+      applyLight(LAMP.yellow, grey);
+      applyLight(LAMP.green, "green");
+      break;
+
+    default:
+      applyLight(LAMP.red, grey);
+      applyLight(LAMP.yellow, grey);
+      applyLight(LAMP.green, grey);
   }
+
+  currentState = state;
 }

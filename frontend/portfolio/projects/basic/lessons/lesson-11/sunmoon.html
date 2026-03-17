@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SunMoonSwap</title>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        transition: background-color 0.5s ease;
+        background-color: lightyellow;
+      }
+
+      img {
+        width: 220px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      img:hover {
+        transform: scale(1.2);
+      }
+
+      img[src="moon.png"] {
+        filter: drop-shadow(-15px 15px 25px rgba(180, 200, 255, 0.8));
+      }
+    </style>
+  </head>
+
+  <body>
+    <img id="bildknapp" src="sun.png" />
+
+    <script>
+      const btn = document.getElementById("bildknapp");
+
+      let isDay = true;
+
+      btn.addEventListener("click", switchDayNight);
+
+      function switchDayNight() {
+        if (isDay) {
+          btn.src = "moon.png";
+          document.body.style.backgroundColor = "#0b0f2a";
+        } else {
+          btn.src = "sun.png";
+          document.body.style.backgroundColor = "lightyellow";
+        }
+
+        isDay = !isDay;
+      }
+    </script>
+  </body>
+</html>

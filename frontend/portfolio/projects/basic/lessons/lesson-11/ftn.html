@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="nameInput" placeholder="Skriv ditt namn..." />
+    <button onclick="showName()">Visa namn</button>
+
+    <p id="result"></p>
+
+    <script>
+      function showName() {
+        const name = document.getElementById("nameInput").value;
+        document.getElementById("result").innerText = "Hej " + name + "!";
+      }
+    </script>
+  </body>
+</html>
