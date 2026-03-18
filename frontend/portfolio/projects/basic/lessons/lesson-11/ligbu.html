@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ljusdimmer</title>
+
+    <style>
+      body {
+        margin: 0;
+        display: grid;
+        justify-content: center;
+        padding-top: 10vh;
+        font-family: Arial, sans-serif;
+      }
+
+      main {
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 30px;
+      }
+
+      #lampa {
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        border-radius: 50%;
+        margin-bottom: 30px;
+        opacity: 0.5;
+        box-shadow: 0 0 50px yellow;
+        transition: all 0.1s;
+      }
+
+      input[type="range"] {
+        width: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1>Ljusdimmer</h1>
+
+      <div id="lampa"></div>
+
+      <input type="range" min="0" max="100" value="50" id="slider" />
+    </main>
+
+    <script>
+      const slider = document.getElementById("slider");
+      const lampa = document.getElementById("lampa");
+
+      updateLight(slider.value);
+
+      slider.addEventListener("input", () => {
+        updateLight(slider.value);
+      });
+
+      function updateLight(value) {
+        const brightness = value / 100;
+
+        lampa.style.opacity = brightness;
+
+        //  lampa.style.boxShadow = "0 0 " + value + "px yellow";
+        lampa.style.boxShadow = `0 0 ${value}px yellow`; //Template string
+      }
+    </script>
+  </body>
+</html>
