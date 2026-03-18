@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bench Press 1RM Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="calculator">
+      <h1>Bench Press Calculator</h1>
+      <p>
+        Calculate your estimated 1RM, training percentages, and rep max targets.
+      </p>
+
+      <section class="calculator-form">
+        <h2>Enter your lift</h2>
+
+        <form id="rm-form">
+          <div class="form-group">
+            <label for="weight">Weight (kg)</label>
+            <input
+              type="number"
+              id="weight"
+              name="weight"
+              step="0.1"
+              min="0"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="reps">Reps</label>
+            <input
+              type="number"
+              id="reps"
+              name="reps"
+              min="1"
+              required
+            />
+          </div>
+
+          <button type="submit">Calculate</button>
+        </form>
+      </section>
+
+      <section class="calculator-result">
+        <h2>Your 1RM is: <span id="one-rep-max">-</span></h2>
+      </section>
+
+      <section class="percentage-table">
+        <h2>Training Percentages</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Percentage of 1RM</th>
+              <th>Lift Weight</th>
+            </tr>
+          </thead>
+          <tbody id="percentage-body"></tbody>
+        </table>
+      </section>
+
+      <section class="repmax-table">
+        <h2>Rep Max Weights</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Repetitions</th>
+              <th>Lift Weight</th>
+            </tr>
+          </thead>
+          <tbody id="repmax-body"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
