@@ -2,14 +2,9 @@
   --font: "DM Sans", system-ui, sans-serif;
   --bg: #f0eee7;
   --text: #3f1919;
-  --card-bg: rgba(63, 25, 25, 0.06);
+  --text-rgb: 63, 25, 25;
   --input-bg: #fff;
-  --border: rgba(63, 25, 25, 0.25);
-  --focus-ring: rgba(63, 25, 25, 0.5);
   --muted-opacity: 0.85;
-  --nav-hover: rgba(63, 25, 25, 0.08);
-  --widget-active-bg: rgba(63, 25, 25, 0.1);
-  --widget-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
   --radius: 0.5rem;
   --contact-gap-top: 200px;
   --contact-gap-bottom: 100px;
@@ -82,6 +77,14 @@ header {
   margin-bottom: 2.5rem;
 }
 
+.hero-name {
+  font-family: "Playfair Display", system-ui, serif;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  font-size: 1.6em;
+  margin-left: 0.15em;
+}
+
 .hero-highlight {
   display: inline-block;
   font-size: 2.25rem;
@@ -108,32 +111,42 @@ header {
   gap: 0.75rem;
 }
 
-.hero-buttons__btn {
-  display: inline-block;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   padding: 0.6rem 1.25rem;
   font-family: var(--font);
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text);
   background: var(--bg);
-  border: 2px solid var(--border);
+  border: 2px solid rgba(var(--text-rgb), 0.25);
   border-radius: var(--radius);
   text-decoration: none;
   cursor: pointer;
-  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.hero-buttons__btn:first-child {
+.btn--primary {
   background: var(--text);
   color: var(--bg);
   border-color: var(--text);
 }
 
-.hero-buttons__btn:hover {
+.btn:hover {
   background: var(--text);
   color: var(--bg);
   border-color: var(--text);
   transform: translateY(-2px);
+}
+
+.hero-buttons__btn {
+  display: inline-flex;
+  align-items: center;
 }
 
 .hero-portrait {
@@ -164,11 +177,13 @@ nav a {
   white-space: nowrap;
   padding: 0.35rem 0.5rem;
   border-radius: 0.35rem;
-  transition: background-color 0.25s ease, color 0.25s ease;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
 nav a:hover {
-  background-color: var(--nav-hover);
+  background-color: rgba(var(--text-rgb), 0.08);
 }
 
 .section {
@@ -204,7 +219,7 @@ nav a:hover {
 .skills-courses {
   margin-top: 1.5rem;
   padding-top: 1rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid rgba(var(--text-rgb), 0.25);
 }
 
 .skills-courses__title {
@@ -220,7 +235,7 @@ nav a:hover {
 .skills-courses__block + .skills-courses__block {
   margin-top: 1.5rem;
   padding-top: 1.25rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid rgba(var(--text-rgb), 0.25);
 }
 
 .skills-courses__list {
@@ -264,7 +279,7 @@ nav a:hover {
   width: 0;
   min-width: 0;
   height: 100%;
-  max-height: 8.0rem;
+  max-height: 8rem;
   object-fit: contain;
   object-position: center;
   display: block;
@@ -326,7 +341,7 @@ nav a:hover {
 
 .skill-card {
   padding: 1rem;
-  background: var(--card-bg);
+  background: rgba(var(--text-rgb), 0.06);
   border-radius: var(--radius);
 }
 
@@ -361,6 +376,40 @@ nav a:hover {
   margin-top: 2.5rem;
 }
 
+.project-links {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-links__btn {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+.project-links__btn:hover {
+  transform: translateY(-1px);
+}
+
+.project-links__btn--muted {
+  opacity: var(--muted-opacity);
+  cursor: default;
+}
+
+.project-links__btn--muted:hover {
+  transform: none;
+  background: var(--bg);
+  color: var(--text);
+  border-color: rgba(var(--text-rgb), 0.25);
+}
+
+.project-links__icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
 .project-image img {
   width: 100%;
   height: auto;
@@ -381,7 +430,7 @@ nav a:hover {
   align-items: center;
   text-align: center;
   padding: 1.5rem;
-  background: var(--card-bg);
+  background: rgba(var(--text-rgb), 0.06);
   border-radius: var(--radius);
 }
 
@@ -460,13 +509,13 @@ nav a:hover {
   font-size: 1rem;
   color: var(--text);
   background: var(--input-bg);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(var(--text-rgb), 0.25);
   border-radius: var(--radius);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  outline: 2px solid var(--focus-ring);
+  outline: 2px solid rgba(var(--text-rgb), 0.5);
   outline-offset: 2px;
 }
 
@@ -516,7 +565,9 @@ footer .container {
   display: block;
   color: inherit;
   text-decoration: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .footer-social__link:hover {
@@ -537,14 +588,14 @@ footer .container {
   gap: 0.25rem;
   padding: 0.2rem 0.5rem;
   border-radius: 1.25rem;
-  background: var(--card-bg);
+  background: rgba(var(--text-rgb), 0.06);
   font-size: 0.8rem;
   font-weight: 600;
 }
 
 .weather-widget--active {
-  background: var(--widget-active-bg);
-  box-shadow: var(--widget-shadow);
+  background: rgba(var(--text-rgb), 0.1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 
 .weather-widget__icon {
@@ -797,7 +848,6 @@ footer .container {
     width: 28px;
     height: 28px;
   }
-
 }
 
 @media (min-width: 1024px) {

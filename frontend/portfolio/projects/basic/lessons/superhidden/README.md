@@ -1,2 +1,0 @@
-# WebPortfolio
-web portfolio assignment
